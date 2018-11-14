@@ -1,0 +1,8 @@
+tmp
+vendor
+templates_c
+app/src/main/assets/www
+app/src/main/res/mipmap-*
+.gradle
+build
+local.properties

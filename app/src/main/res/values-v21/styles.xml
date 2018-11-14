@@ -1,0 +1,10 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+<style name="HlasyPtaku" parent="@style/Theme.AppCompat.Light">
+    <item name="android:windowBackground">@color/ptaci_bg</item>
+    <item name="android:colorBackground">@color/ptaci_bg</item>
+		<item name="android:colorPrimary">@color/ptaci_header</item>
+		<item name="android:colorPrimaryDark">@color/ptaci_header</item>
+		<item name="android:navigationBarColor">@color/ptaci_header</item>
+</style>
+</resources>
