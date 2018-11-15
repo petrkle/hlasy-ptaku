@@ -40,16 +40,39 @@ foreach($kategorie as $url=>$nazev){
 	}
 }
 
+uasort($birds, 'sort_by_jmeno');
+
+$cislo = 0;
+$seznamptaku = array();
+foreach($birds as $htmlfile => $bird){
+	$seznamptaku[$cislo] = array('file' => $htmlfile,
+		'bird' =>$bird);
+	$cislo++;
+}
+
+$cislo = 0;
+
 foreach($birds as $htmlfile => $bird){
 	$smarty->assign('title', $bird['jmeno']);
 	$smarty->assign('ptak', $bird);
+	if($cislo == 0){
+		$smarty->assign('prev', $seznamptaku[count($seznamptaku)-1]);
+	}else{
+		$smarty->assign('prev', $seznamptaku[$cislo-1]);
+	}
+
+
+	if($cislo == count($seznamptaku)-1){
+		$smarty->assign('next', $seznamptaku[0]);
+	}else{
+		$smarty->assign('next', $seznamptaku[$cislo+1]);
+	}
 	$html = $smarty->fetch('hlavicka.tpl');
 	$html .= $smarty->fetch('ptak.tpl');
 	$html .= $smarty->fetch('paticka.tpl');
 	file_put_contents(WWW.'/'.$htmlfile, $html);
+	$cislo++;
 }
-
-uasort($birds, 'sort_by_jmeno');
 
 $smarty->assign('title', 'Hlasy ptáků');
 $smarty->assign('ptaci', $birds);
@@ -66,6 +89,8 @@ file_put_contents(WWW.'/about.html', $html);
 
 copy('templates/ptaci.css', WWW.'/ptaci.css');
 copy('templates/roboto-regular.ttf', WWW.'/roboto-regular.ttf');
+copy('templates/jquery-1.12.4.min.js', WWW.'/jquery.js');
+copy('templates/jquery.touchSwipe-1.6.18.min.js', WWW.'/ts.js');
 
 copyToDir(TMP.'/*.jpeg', WWW);
 copyToDir(TMP.'/*.mp3', WWW);

@@ -1,6 +1,9 @@
+<script src="jquery.js"></script>
+<script src="ts.js"></script>
 <a href="index.html" class="hlavicka"><h1>{$title}</h1></a>
 {if isset($ptak.img[0])}
-<a href="{$ptak.img[0].id}.jpeg"><img src="{$ptak.img[0].id}.jpeg" style="width:100%;max-width:40em;"></a>
+
+<a href="{$ptak.img[0].id}.jpeg"><img src="{$ptak.img[0].id}.jpeg" style="width:100%;max-width:40em;" id="obr"></a>
 <p>
 {$ptak.img[0].popis}
 </p>
@@ -32,3 +35,28 @@
 <p>{$info}</p>
 {/if}
 {/foreach}
+<script>
+{literal}
+$(document).ready(function () {
+			$("#obr").swipe( {
+        swipeLeft:function(event, direction, distance, duration, fingerCount) {
+{/literal}
+					window.location = "{$next.file}";
+{literal}
+        },
+        threshold: 100
+      });
+{/literal}
+{literal}
+			$("#obr").swipe( {
+        swipeRight:function(event, direction, distance, duration, fingerCount) {
+{/literal}
+					window.location = "{$prev.file}";
+{literal}
+        },
+        threshold: 100
+      });
+{/literal}
+
+});
+</script>
