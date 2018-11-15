@@ -18,6 +18,7 @@ foreach($kategorie as $url=>$nazev){
 		$birds[$htmlfile] = array(
 			'jmeno' => $jmeno,
 			'info' => get_ptakinfo($clanek),
+			'nahravky' => get_nahravkyinfo($clanek),
 			'img' => array(),
 			'mp3' => array(),
 		);

@@ -24,3 +24,11 @@
 </audio>
 
 {/foreach}
+
+{foreach from=$ptak.nahravky item=info}
+{if $info == 'Jak vznikaly nahrávky'}
+<h3>{$info}</h3>
+{else}
+<p>{$info}</p>
+{/if}
+{/foreach}
