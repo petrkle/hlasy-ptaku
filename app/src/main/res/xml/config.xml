@@ -6,7 +6,7 @@
     </feature>
     <name>hlasyptaku</name>
     <content src="index.html" />
-    <preference name="loglevel" value="DEBUG" />
+    <preference name="loglevel" value="ERROR" />
 		<allow-intent href="https://*/*" />
 		<allow-intent href="http://*/*" />
 		<allow-intent href="mailto:*" />
