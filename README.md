@@ -2,6 +2,10 @@
 
 Převod stránek Českého rozhlasu [www.rozhlas.cz/hlas](http://www.rozhlas.cz/hlas/) na aplikaci pro Android.
 
+## Google Play
+
+https://play.google.com/store/apps/details?id=cz.kle.hlasyptaku
+
 ## Ochrana soukromí
 
 Žádné datové přenosy. Nejsou vyžadována žádná
