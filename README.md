@@ -1,6 +1,22 @@
-## rozhlas.cz/hlas
+# Hlasy ptáků
 
-Převod stránek Českého rozhlasu [www.rozhlas.cz/hlas](http://www.rozhlas.cz/hlas/) na aplikaci pro Android.
+Aplikace pro Android, která nabízí obrázky, základní informace a
+zvukové nahrávky 200 opeřenců z české přírody.
+
+Podle abecedy vyhledejte zvíře a jeho charakteristický hlas.
+
+Data pocházejí ze stránek projektu [Hlas pro tentoden](https://rozhlas.cz/hlas] od Českého rozhlasu.
+
+## Výhody
+
+Funguje i bez připojení k internetu.
+
+Žádné reklamy
+
+## Upozornění
+
+Velikost aplikace 96M - stahujte na připojení bez účtování
+přenesených dat.
 
 ## Google Play
 
