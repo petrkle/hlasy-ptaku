@@ -5,7 +5,7 @@ zvukové nahrávky 200 opeřenců z české přírody.
 
 Podle abecedy vyhledejte zvíře a jeho charakteristický hlas.
 
-Data pocházejí ze stránek projektu [Hlas pro tentoden](https://rozhlas.cz/hlas] od Českého rozhlasu.
+Data pocházejí ze stránek projektu [Hlas pro tento den](https://rozhlas.cz/hlas) od Českého rozhlasu.
 
 ## Výhody
 
