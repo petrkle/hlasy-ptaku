@@ -54,6 +54,7 @@ $cislo = 0;
 
 foreach($birds as $htmlfile => $bird){
 	$smarty->assign('title', $bird['jmeno']);
+	$smarty->assign('title_ascii', asciize($bird['jmeno']));
 	$smarty->assign('ptak', $bird);
 	if($cislo == 0){
 		$smarty->assign('prev', $seznamptaku[count($seznamptaku)-1]);

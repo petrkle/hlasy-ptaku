@@ -4,7 +4,7 @@
 {if isset($ptak.img[0])}
 
 <a href="{$ptak.img[0].id}.jpeg"><img src="{$ptak.img[0].id}.jpeg" style="width:100%;max-width:45rem;" id="obr"></a>
-{if $ptak.img[0].popis != $title}
+{if $ptak.img[0].popis_ascii != $title_ascii}
 <p>
 {$ptak.img[0].popis}
 </p>

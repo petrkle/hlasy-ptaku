@@ -67,6 +67,7 @@ function get_img($url){
 				'orig' => $orig,
 				'link' => $link,
 				'popis' => $popis,
+				'popis_ascii' => asciize($popis),
 			);
 		}
 	}
