@@ -3,7 +3,7 @@
 <a href="index.html" class="hlavicka"><h1>{$title}</h1></a>
 {if isset($ptak.img[0])}
 
-<a href="{$ptak.img[0].id}.jpeg"><img src="{$ptak.img[0].id}.jpeg" style="width:100%;max-width:40em;" id="obr"></a>
+<a href="{$ptak.img[0].id}.jpeg"><img src="{$ptak.img[0].id}.jpeg" style="width:100%;max-width:45rem;" id="obr"></a>
 {if $ptak.img[0].popis != $title}
 <p>
 {$ptak.img[0].popis}
