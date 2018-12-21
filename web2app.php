@@ -10,6 +10,8 @@ if(!is_dir(WWW)){
 	mkdir(WWW, 0755, true);
 }
 
+$VERSION = `gradle -q printVersionName`;
+
 foreach($kategorie as $url=>$nazev){
 	$ptaci = get_members($url.'?mode=100');
 	foreach($ptaci as $clanek=>$jmeno){
@@ -79,7 +81,6 @@ foreach($birds as $htmlfile => $bird){
 		$smarty->assign('prev', $seznamptaku[$cislo-1]);
 	}
 
-
 	if($cislo == count($seznamptaku)-1){
 		$smarty->assign('next', $seznamptaku[0]);
 	}else{
@@ -100,6 +101,7 @@ $html .= $smarty->fetch('paticka.tpl');
 file_put_contents(WWW.'/index.html', $html);
 
 $smarty->assign('title', 'Hlasy ptáků');
+$smarty->assign('VERSION', $VERSION);
 $html = $smarty->fetch('hlavicka.tpl');
 $html .= $smarty->fetch('about.tpl');
 $html .= $smarty->fetch('paticka.tpl');

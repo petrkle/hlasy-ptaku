@@ -13,6 +13,8 @@ Textové, zvukové a obrazové materiály Českého rozhlasu jsou chráněny aut
 <a href="index.html"><img src="ptak512.png" style="width:100%;max-width:512px;"></a>
 </p>
 
-<p style="text-align:center;">Zdrojový kód: <a href="https://github.com/petrkle/hlasy-ptaku">Github - Hlasy ptáků</a></p>
+<p style="text-align:center;">Verze: {$VERSION}</p>
+
+<p style="text-align:center;"><a href="https://github.com/petrkle/hlasy-ptaku">Zdrojový kód</a></p>
 
 <p style="text-align:center;">Kontakt: <a href="mailto:petr@kle.cz?subject=Hlasy ptáků">petr@kle.cz</a></p>

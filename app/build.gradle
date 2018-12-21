@@ -1,4 +1,22 @@
 apply plugin: 'com.android.application'
+import org.ajoberstar.grgit.Grgit
+
+ext {
+	git = Grgit.open(currentDir: projectDir)
+	gitVersionName = git.describe()
+	gitVersionCode = git.log().size()
+}
+
+
+task printVersionName() {
+    println("$gitVersionName")
+}
+
+android {
+    defaultConfig {
+        versionName "${gitVersionName}"
+    }
+}
 
 android {
     compileSdkVersion 28
@@ -7,8 +25,8 @@ android {
         applicationId "cz.kle.hlasyptaku"
         minSdkVersion 21
         targetSdkVersion 28
-        versionCode 4
-        versionName "1.4"
+        versionCode gitVersionCode
+        versionName "${gitVersionName}"
 				setProperty("archivesBaseName", "Hlasy-ptaku-$versionName")
     }
 		signingConfigs {
