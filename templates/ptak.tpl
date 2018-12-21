@@ -1,32 +1,36 @@
 <script src="jquery.js"></script>
 <script src="ts.js"></script>
 <a href="index.html" class="hlavicka"><h1>{$title}</h1></a>
-{if isset($ptak.img[0])}
+{foreach from=$ptak.clanek item=info}
 
-<a href="{$ptak.img[0].id}.jpeg"><img src="{$ptak.img[0].id}.jpeg" style="width:100%;max-width:45rem;" id="obr"></a>
-{if $ptak.img[0].popis_ascii != $title_ascii}
+{if $info.typ == 'text'}
+{if $info.text == 'Základní údaje'}
+<h3>{$info.text}</h3>
+{else}
 <p>
-{$ptak.img[0].popis}
+{$info.text}
 </p>
 {/if}
 {/if}
-{foreach from=$ptak.info item=info}
-{if $info == 'Základní údaje'}
-<h3>{$info}</h3>
-{else}
-<p>{$info}</p>
+
+{if $info.typ == 'img'}
+<a href="{$info.img.id}.jpeg"><img src="{$info.img.id}.jpeg" style="width:100%;max-width:45rem;" class="obr"></a>
+{if $info.img.popis_ascii != $title_ascii}
+<p>
+{$info.img.popis}
+</p>
 {/if}
-{/foreach}
+{/if}
 
-{foreach from=$ptak.mp3 item=mp3}
-
-<label for="{$mp3.id}"><h3>{$mp3.popis}</h3></label>
+{if $info.typ == 'mp3'}
+<label for="{$info.mp3.id}"><h3>{$info.mp3.popis}</h3></label>
 
 <audio
-    id="{$mp3.id}"
+    id="{$info.mp3.id}"
     controls
-    src="{$mp3.id}.mp3">
+    src="{$info.mp3.id}.mp3">
 </audio>
+{/if}
 
 {/foreach}
 
@@ -40,7 +44,7 @@
 <script>
 {literal}
 $(document).ready(function () {
-			$("#obr").swipe( {
+			$(".obr").swipe( {
         swipeLeft:function(event, direction, distance, duration, fingerCount) {
 {/literal}
 					window.location = "{$next.file}";
@@ -50,7 +54,7 @@ $(document).ready(function () {
       });
 {/literal}
 {literal}
-			$("#obr").swipe( {
+			$(".obr").swipe( {
         swipeRight:function(event, direction, distance, duration, fingerCount) {
 {/literal}
 					window.location = "{$prev.file}";

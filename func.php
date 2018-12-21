@@ -51,7 +51,7 @@ function get_img($url){
 		$cloned = $obrazek->cloneNode(TRUE);
 		$newdoc->appendChild($newdoc->importNode($cloned,TRUE));
 		$chunk = new DOMXPath($newdoc);
-
+		$nodeposition = count($xpath->query('preceding::*', $obrazek));
 
 		$l = $chunk->query('//a');
 		$d = $chunk->query('//p[@class="description"]/span');
@@ -63,6 +63,7 @@ function get_img($url){
 			$orig = preg_replace('/(.*_obrazek\/[0-9]+)\-\-.*/', '\1', $link).'.jpeg';
 			$id = basename($orig, '.jpeg');
 			$linky[$id] = array(
+				'poradi' => $nodeposition,
 				'id' => $id,
 				'orig' => $orig,
 				'link' => $link,
@@ -85,6 +86,8 @@ function get_mp3($url){
 
 	foreach($audio as $mp3){
 
+		$nodeposition = count($xpath->query('preceding::*', $mp3));
+
 		$newdoc = new DOMDocument();
 		$cloned = $mp3->cloneNode(TRUE);
 		$newdoc->appendChild($newdoc->importNode($cloned,TRUE));
@@ -101,6 +104,7 @@ function get_mp3($url){
 			$link = $l->item(0)->getAttribute("href");
 			$mp3 = preg_replace('/.*audio\/([0-9]+).*/', 'https://media.rozhlas.cz/_audio/\1.mp3', $link);
 			array_push($linky, array(
+			'poradi' => $nodeposition,
 			'url' => $mp3,
 			'id' => basename($mp3, '.mp3'),
 			'popis' => $popis,
@@ -148,9 +152,10 @@ function get_ptakinfo($url){
 	$xpath = new DOMXPath($dom);
 	$odstavce = $xpath->query("//div[@id='article']/p");
 	foreach($odstavce as $odstavec){
+		$nodeposition = count($xpath->query('preceding::*', $odstavec));
 		$text = trim(preg_replace(['(\s+)u', '(^\s|\s$)u'], [' ', ''], $odstavec->nodeValue));
 		if(strlen($text)>0 and !preg_match('/^Video:/', $text)){
-			array_push($navrat, $text);
+			array_push($navrat, array('poradi'=> $nodeposition, 'text' => $text));
 		}
 	}
 	return($navrat);

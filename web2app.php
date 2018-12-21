@@ -55,6 +55,23 @@ $cislo = 0;
 foreach($birds as $htmlfile => $bird){
 	$smarty->assign('title', $bird['jmeno']);
 	$smarty->assign('title_ascii', asciize($bird['jmeno']));
+
+	$bird['clanek'] = array();
+
+	foreach($bird['info'] as $info){
+		$bird['clanek'][$info['poradi']] = array('typ' => 'text', 'text' => $info['text']);
+	}
+
+	foreach($bird['img'] as $img){
+		$bird['clanek'][$img['poradi']] = array('typ' => 'img', 'img' => $img);
+	}
+
+	foreach($bird['mp3'] as $mp3){
+		$bird['clanek'][$mp3['poradi']] = array('typ' => 'mp3', 'mp3' => $mp3);
+	}
+
+	ksort($bird['clanek']);
+
 	$smarty->assign('ptak', $bird);
 	if($cislo == 0){
 		$smarty->assign('prev', $seznamptaku[count($seznamptaku)-1]);
