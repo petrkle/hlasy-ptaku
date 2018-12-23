@@ -4,6 +4,8 @@ import org.ajoberstar.grgit.Grgit
 ext {
 	git = Grgit.open(currentDir: projectDir)
 	gitVersionName = git.describe()
+	dirty = !git.status().clean
+	if(dirty) gitVersionName = gitVersionName + '-dirty'
 	gitVersionCode = git.log().size()
 }
 

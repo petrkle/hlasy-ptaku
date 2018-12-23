@@ -10,7 +10,7 @@ if(!is_dir(WWW)){
 	mkdir(WWW, 0755, true);
 }
 
-$VERSION = `gradle -q printVersionName`;
+$VERSION = `TERM=xterm-color gradle -q printVersionName`;
 
 foreach($kategorie as $url=>$nazev){
 	$ptaci = get_members($url.'?mode=100');
