@@ -166,10 +166,10 @@ function get_nahravkyinfo($url){
 	$dom = new DOMDocument();
 	$dom->loadHTML(file_get_contents(TMP.'/'.url2fn($url)));
 	$xpath = new DOMXPath($dom);
-	$odstavce = $xpath->query("//div[@id='article']/div[contains(@style,'color: grey')]/span");
+	$odstavce = $xpath->query("(//div[@id='article']/div[contains(@style,'color: grey')]/span)[position()<last()]");
 	foreach($odstavce as $odstavec){
 		$text = trim(preg_replace(['(\s+)u', '(^\s|\s$)u'], [' ', ''], $odstavec->nodeValue));
-			array_push($navrat, $text);
+		array_push($navrat, $text);
 	}
 	return($navrat);
 }
