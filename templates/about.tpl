@@ -1,5 +1,9 @@
 <a href="index.html" class="hlavicka"><h1>{$title}</h1></a>
 
+<p>
+Obrázky, základní informace a zvukové nahrávky {$pocet} opeřenců z české přírody.
+</p>
+
 <h3><a href="https://www.rozhlas.cz/hlas">rozhlas.cz/hlas</a></h3>
 <p>
 Aplikace obsahuje data ze stránek Českého rozhlasu <a href="https://www.rozhlas.cz/hlas">rozhlas.cz/hlas</a>
