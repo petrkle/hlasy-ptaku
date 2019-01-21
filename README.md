@@ -1,7 +1,7 @@
 # Hlasy ptáků
 
 Aplikace pro Android, která nabízí obrázky, základní informace a
-zvukové nahrávky 200 opeřenců z české přírody.
+zvukové nahrávky 184 opeřenců z české přírody.
 
 Podle abecedy vyhledejte zvíře a jeho charakteristický hlas.
 
@@ -11,7 +11,7 @@ Data pocházejí ze stránek projektu [Hlas pro tento den](https://rozhlas.cz/hl
 
 Funguje i bez připojení k internetu.
 
-Žádné reklamy
+Žádné reklamy.
 
 ## Upozornění
 
