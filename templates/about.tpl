@@ -17,8 +17,20 @@ Textové, zvukové a obrazové materiály Českého rozhlasu jsou chráněny aut
 <a href="index.html"><img src="ptak512.png" style="width:100%;max-width:512px;"></a>
 </p>
 
-<p style="text-align:center;">Verze: {$VERSION}</p>
+<h3>Podpoř Hlasy ptáků!</h3>
 
-<p style="text-align:center;"><a href="https://github.com/petrkle/hlasy-ptaku">Zdrojový kód</a></p>
+<p>
+Hlasy ptáků je volně dostupná aplikace s otevřeným <a href="https://github.com/petrkle/hlasy-ptaků">zdrojovým kódem</a>.
+</p>
 
-<p style="text-align:center;">Kontakt: <a href="mailto:petr@kle.cz?subject=Hlasy ptáků">petr@kle.cz</a></p>
+<p>
+Jste-li spokojeným uživatelem, zvažte prosím finanční podporu.
+</p>
+
+<p>
+Příspěvek na další vývoj, opravy chyb a přidávání nových funkcí můžete poslat na účet: <b>1663602015/3030</b> se zprávou pro příjemce: "Hlasy ptáků".
+</p>
+
+<p class="c">Verze: {$VERSION}</p>
+
+<p class="c">Kontakt: <a href="mailto:petr@kle.cz?subject=Hlasy%20ptáků">petr@kle.cz</a></p>

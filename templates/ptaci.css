@@ -6,6 +6,7 @@ h1{font-size:1.6em;font-weight:bold;margin:0;color:#fff;padding:15px 0;margin:0;
 h3{margin:1em;}
 ul li a, ul li span{display:block;padding:1em 0;margin:0;width:100%;text-align:center;background:#eee;border-bottom:solid 1px #999;color:#000;text-decoration:none;font-weight:bold;}
 p{text-align:left;padding:0 0.5em;margin:1em auto;font-size:1.2em;max-width:45rem;}
+p.c{text-align:center;}
 .obrazek{max-width:45rem;padding:0;margin:0 auto;diplay:block;background:#eee;}
 .obrazek a{display:block;font-size:0;}
 .obrazek p{margin:0 0 1em 0;padding:0.5em;}

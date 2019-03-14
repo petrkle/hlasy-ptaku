@@ -4,7 +4,7 @@ help:
 	@echo "help          - napoveda"
 	@echo "apk           - vytvori apk soubor"
 	@echo "tag           - vytvori novy tag"
-	@echo "clean         - smaze generovane a stažene soubory"
+	@echo "clean         - smaze generovane a stazene soubory"
 
 apk:
 	TERM=xterm-color gradle assembleRelease
