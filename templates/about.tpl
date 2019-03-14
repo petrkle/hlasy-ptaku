@@ -20,7 +20,7 @@ Textové, zvukové a obrazové materiály Českého rozhlasu jsou chráněny aut
 <h3>Podpoř Hlasy ptáků!</h3>
 
 <p>
-Hlasy ptáků je volně dostupná aplikace s otevřeným <a href="https://github.com/petrkle/hlasy-ptaků">zdrojovým kódem</a>.
+Hlasy ptáků je volně dostupná aplikace s otevřeným <a href="https://github.com/petrkle/hlasy-ptaku">zdrojovým kódem</a>.
 </p>
 
 <p>
