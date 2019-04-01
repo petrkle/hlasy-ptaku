@@ -1,6 +1,4 @@
-<script src="jquery.js"></script>
-<script src="ts.js"></script>
-<a href="index.html" class="hlavicka"><h1>{$title}</h1></a>
+<h1><a href="index.html" class="hlavicka">{$title}</a></h1>
 {foreach from=$ptak.clanek item=info}
 
 {if $info.typ == 'text'}

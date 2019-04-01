@@ -1,4 +1,4 @@
-<a href="index.html" class="hlavicka"><h1>{$title}</h1></a>
+<h1><a href="index.html" class="hlavicka">{$title}</a></h1>
 
 <p>
 Obrázky, základní informace a zvukové nahrávky {$pocet} opeřenců z české přírody.
