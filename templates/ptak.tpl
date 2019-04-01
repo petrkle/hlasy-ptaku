@@ -37,28 +37,3 @@
 <p>{$info}</p>
 {/if}
 {/foreach}
-<script>
-{literal}
-$(document).ready(function () {
-			$(".obr").swipe( {
-        swipeLeft:function(event, direction, distance, duration, fingerCount) {
-{/literal}
-					window.location = "{$next.file}";
-{literal}
-        },
-        threshold: 100
-      });
-{/literal}
-{literal}
-			$(".obr").swipe( {
-        swipeRight:function(event, direction, distance, duration, fingerCount) {
-{/literal}
-					window.location = "{$prev.file}";
-{literal}
-        },
-        threshold: 100
-      });
-{/literal}
-
-});
-</script>
