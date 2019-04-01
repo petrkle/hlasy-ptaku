@@ -97,7 +97,7 @@ function get_mp3($url){
 
 		$d = $chunk->query('//p[@class="description"]');
 		if($d->item(0)){
-			$popis = $d->item(0)->nodeValue;
+			$popis = preg_replace('/ \(.*/', '', $d->item(0)->nodeValue);
 		}
 
 		if($l->item(0)){
@@ -154,7 +154,7 @@ function get_ptakinfo($url){
 	foreach($odstavce as $odstavec){
 		$nodeposition = count($xpath->query('preceding::*', $odstavec));
 		$text = trim(preg_replace(['(\s+)u', '(^\s|\s$)u'], [' ', ''], $odstavec->nodeValue));
-		if(strlen($text)>0 and !preg_match('/^Video:/', $text)){
+		if(strlen($text)>0 and !preg_match('/^Video:/', $text) and trim($text)!='.'){
 			array_push($navrat, array('poradi'=> $nodeposition, 'text' => $text));
 		}
 	}
