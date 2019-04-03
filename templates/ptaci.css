@@ -1,5 +1,9 @@
+@media all{
 @font-face{font-family:"robotoregular";src:url("roboto-regular.ttf") format("opentype");}
 html,body{font-family:"robotoregular",sans-serif;color:#000;background:#fff;margin:0;padding:0;text-align:center;margin:0;padding:0;}
+}
+
+@media screen{
 ul,li{margin:0;padding:0;}
 a{color:#000;font-weight:bold;}
 h1{font-size:1.6rem;font-weight:bold;margin:0;color:#fff;padding:0;margin:0;background-color:#393;text-align:center;position:relative;}
@@ -13,5 +17,22 @@ p.c{text-align:center;}
 .obrazek a{display:block;font-size:0;}
 .obrazek p{margin:0 0 1em 0;padding:0.5em;}
 .hlavicka{text-decoration:none;}
-#q{width:90%;margin:0.6rem;padding:0.6rem;border:0;font-size:1.5rem;}
+#q{margin:0;padding:0;border:0;width:100%;font-size:1.3em;line-height:2;height:4rem;}
 #q::-webkit-search-cancel-button{position:relative;right:0.5rem;height:3rem;width:3rem;}
+.vysledek{color:#fff;background:#393;border-bottom:solid 1px #eee;}
+}
+
+@media screen and (min-width: 30em){
+ul{display:flex;justify-content:start;flex-wrap:wrap;}
+ul li{flex: 0 0 50%;display:flex;justify-content:center;}
+ul li a{flex-grow:1;border-bottom:1px solid #999;border-right:1px solid #999;background:#eee;color:#000;display:flex;justify-content:center;align-items:center;padding:2rem 3rem;}
+ul li:nth-child(2n+2) a{border-right:0;}
+}
+
+@media screen and (min-width: 55em){
+ul li a{padding:2rem;}
+ul{background:#eee;}
+ul li{flex: 0 0 25%;}
+ul li:nth-child(2n+2) a{border-right:1px solid #999;}
+ul li:nth-child(4n+4) a{border-right:0;}
+}
