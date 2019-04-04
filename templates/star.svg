@@ -1,0 +1,124 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<!-- Created with Inkscape (http://www.inkscape.org/) -->
+<svg
+   xmlns:dc="http://purl.org/dc/elements/1.1/"
+   xmlns:cc="http://web.resource.org/cc/"
+   xmlns:rdf="http://www.w3.org/1999/02/22-rdf-syntax-ns#"
+   xmlns:svg="http://www.w3.org/2000/svg"
+   xmlns="http://www.w3.org/2000/svg"
+   xmlns:xlink="http://www.w3.org/1999/xlink"
+   xmlns:sodipodi="http://inkscape.sourceforge.net/DTD/sodipodi-0.dtd"
+   xmlns:inkscape="http://www.inkscape.org/namespaces/inkscape"
+   version="1.0"
+   width="108"
+   height="110"
+   id="svg2"
+   sodipodi:version="0.32"
+   inkscape:version="0.43"
+   sodipodi:docname="Stars.svg"
+   sodipodi:docbase="C:\Data\Commons\SVG">
+  <metadata
+     id="metadata1371">
+    <rdf:RDF>
+      <cc:Work
+         rdf:about="">
+        <dc:format>image/svg+xml</dc:format>
+        <dc:type
+           rdf:resource="http://purl.org/dc/dcmitype/StillImage" />
+      </cc:Work>
+    </rdf:RDF>
+  </metadata>
+  <sodipodi:namedview
+     inkscape:window-height="749"
+     inkscape:window-width="1024"
+     inkscape:pageshadow="2"
+     inkscape:pageopacity="0.0"
+     borderopacity="1.0"
+     bordercolor="#666666"
+     pagecolor="#ffffff"
+     id="base"
+     inkscape:zoom="1.4571067"
+     inkscape:cx="226.72881"
+     inkscape:cy="55"
+     inkscape:window-x="-4"
+     inkscape:window-y="-4"
+     inkscape:current-layer="svg2" />
+  <defs
+     id="defs4">
+    <radialGradient
+       cx="80"
+       cy="242.58746"
+       r="97.352219"
+       fx="80"
+       fy="242.58746"
+       id="radialGradient1888"
+       xlink:href="#linearGradient2762"
+       gradientUnits="userSpaceOnUse"
+       gradientTransform="matrix(0.54003,0,0,0.513599,13.68591,-69.5927)" />
+    <radialGradient
+       cx="80"
+       cy="242.58746"
+       r="97.352219"
+       fx="80"
+       fy="242.58746"
+       id="radialGradient4659"
+       xlink:href="#linearGradient2762"
+       gradientUnits="userSpaceOnUse"
+       gradientTransform="matrix(1,0,0,0.951057,0,11.87307)" />
+    <linearGradient
+       id="linearGradient2762">
+      <stop
+         style="stop-color:#fc0;stop-opacity:1"
+         offset="0"
+         id="stop2764" />
+      <stop
+         style="stop-color:#ff6e00;stop-opacity:1"
+         offset="1"
+         id="stop2766" />
+    </linearGradient>
+    <radialGradient
+       cx="80"
+       cy="242.58746"
+       r="97.352219"
+       fx="80"
+       fy="242.58746"
+       id="radialGradient2075"
+       xlink:href="#linearGradient2762"
+       gradientUnits="userSpaceOnUse"
+       gradientTransform="matrix(0.54003,0,0,0.513599,76.46677,-215.6526)" />
+    <radialGradient
+       cx="80"
+       cy="242.58746"
+       r="97.352219"
+       fx="80"
+       fy="242.58746"
+       id="radialGradient2095"
+       xlink:href="#linearGradient2762"
+       gradientUnits="userSpaceOnUse"
+       gradientTransform="matrix(0.54003,0,0,0.513599,13.68574,-69.59274)" />
+    <radialGradient
+       cx="80"
+       cy="242.58746"
+       r="97.352219"
+       fx="80"
+       fy="242.58746"
+       id="radialGradient2131"
+       xlink:href="#linearGradient2762"
+       gradientUnits="userSpaceOnUse"
+       gradientTransform="matrix(0.54003,0,0,0.513599,10.7976,-69.5927)" />
+    <radialGradient
+       cx="80"
+       cy="242.58746"
+       r="97.352219"
+       fx="80"
+       fy="242.58746"
+       id="radialGradient2135"
+       xlink:href="#linearGradient2762"
+       gradientUnits="userSpaceOnUse"
+       gradientTransform="matrix(0.54003,0,0,0.513599,118.9916,-69.5927)" />
+  </defs>
+  <path
+     d="M 53.999999,4.99999 L 66.40917,43.19888 L 106.57312,43.1966 L 74.07846,66.802524 L 86.491969,105.00001 L 53.999999,81.390382 L 21.508023,105.00001 L 33.921537,66.80253 L 1.4268803,43.1966 L 41.590829,43.19888 L 53.999999,4.99999 z "
+     style="fill:url(#radialGradient2131);fill-opacity:1;fill-rule:evenodd;stroke:none;stroke-width:10;stroke-linecap:round;stroke-linejoin:round;stroke-miterlimit:4;stroke-dasharray:none;stroke-opacity:1"
+     id="use2123" />
+</svg>

@@ -7,5 +7,3 @@
 	<link rel="stylesheet" media="screen" type="text/css" href="ptaci.css" />
 </head>
 <body>
-<script src="index.js"></script>
-<script src="search.js"></script>

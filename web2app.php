@@ -110,10 +110,9 @@ file_put_contents(WWW.'/about.html', $html);
 
 copy('templates/ptaci.css', WWW.'/ptaci.css');
 copy('templates/roboto-regular.ttf', WWW.'/roboto-regular.ttf');
-copy('templates/index.js', WWW.'/index.js');
-copy('templates/search.js', WWW.'/search.js');
 copy('img/ptak512.png', WWW.'/ptak512.png');
-copy('templates/s.svg', WWW.'/s.svg');
 
+copyToDir('templates/*.js', WWW);
+copyToDir('templates/*.svg', WWW);
 copyToDir(TMP.'/*.jpeg', WWW);
 copyToDir(TMP.'/*.mp3', WWW);

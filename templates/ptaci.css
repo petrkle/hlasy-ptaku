@@ -20,6 +20,9 @@ p.c{text-align:center;}
 #q{margin:0;padding:0;border:0;width:100%;font-size:1.3em;line-height:2;height:4rem;}
 #q::-webkit-search-cancel-button{position:relative;right:0.5rem;height:3rem;width:3rem;}
 .vysledek{color:#fff;background:#393;border-bottom:solid 1px #eee;}
+#star{position:absolute;left:0;top:0;padding:1rem 0.5rem;background:#393;width:2rem;height:2rem;}
+.bm{display:inline-block;}
+.bm:after, h2.bookmark:after{content:'';display:inline-block;width:2em;height: 1em;background:url(star.svg) no-repeat 50% 50%;background-size:1em;}
 }
 
 @media screen and (min-width: 30em){
