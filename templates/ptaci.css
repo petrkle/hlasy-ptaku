@@ -36,6 +36,7 @@ ul li:nth-child(2n+2) a{border-right:0;}
 ul li a{padding:2rem;}
 ul{background:#eee;}
 ul li{flex: 0 0 25%;}
+ul.nav li{flex: 0 0 50%;}
 ul li:nth-child(2n+2) a{border-right:1px solid #999;}
 ul li:nth-child(4n+4) a{border-right:0;}
 }

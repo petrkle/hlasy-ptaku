@@ -35,3 +35,12 @@
 <p>{$info}</p>
 {/if}
 {/foreach}
+
+<ul class="nav">
+{if isset($prev)}
+<li><a href="{$prev.file}">&laquo; {$prev.bird.jmeno}</a></li>
+{/if}
+{if isset($next)}
+<li><a href="{$next.file}">{$next.bird.jmeno} &raquo;</a></li>
+{/if}
+</ul>
