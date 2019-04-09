@@ -47,6 +47,7 @@ function vyhledavani(event){
 				nalezeno++;
 			}
 
+		if(foo.l){
 			var nazevl = foo.l;
 			var nazevlpozpatuku = nazevl.split(' ').reverse().join(' ');
 
@@ -58,6 +59,7 @@ function vyhledavani(event){
 				}
 				nalezeno++;
 			}
+		}
 
 	}
 

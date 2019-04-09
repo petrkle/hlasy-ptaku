@@ -5,6 +5,7 @@ require('func.php');
 
 $kategorie = get_categories();
 $birds = array();
+$rubriky = array();
 
 if(!is_dir(WWW)){
 	mkdir(WWW, 0755, true);
@@ -19,6 +20,9 @@ foreach($kategorie as $url=>$nazev){
 		savehtml(ROZHLAS.$clanek);
 		$birds[$htmlfile] = array(
 			'jmeno' => $jmeno,
+			'htmlfile' => $htmlfile,
+			'rubrika' => get_rubrika($clanek),
+			'rubrikaid' => asciize(get_rubrika($clanek)),
 			'info' => get_ptakinfo($clanek),
 			'nahravky' => get_nahravkyinfo($clanek),
 			'img' => array(),
@@ -39,10 +43,22 @@ foreach($kategorie as $url=>$nazev){
 			}
 			array_push($birds[$htmlfile]['mp3'], $mp3);
 		}
+
+		if(isset($rubriky[$birds[$htmlfile]['rubrikaid']])){
+			array_push($rubriky[$birds[$htmlfile]['rubrikaid']]['clenove'], $birds[$htmlfile]);
+		}else{
+			$rubriky[$birds[$htmlfile]['rubrikaid']] = array(
+				'jmeno' => $birds[$htmlfile]['rubrika'],
+				'clenove' => array($birds[$htmlfile]),
+			);
+		}
+
 	}
 }
 
 uasort($birds, 'sort_by_jmeno');
+
+uasort($rubriky, 'sort_by_jmeno');
 
 $cislo = 0;
 $seznamptaku = array();
@@ -93,12 +109,31 @@ foreach($birds as $htmlfile => $bird){
 	$cislo++;
 }
 
+foreach($rubriky as $htmlfile => $rubrika){
+
+	uasort($rubrika['clenove'], 'sort_by_jmeno');
+
+	$smarty->assign('title', $rubrika['jmeno']);
+	$smarty->assign('rubrika', $rubrika);
+	$html = $smarty->fetch('hlavicka.tpl');
+	$html .= $smarty->fetch('rubrika.tpl');
+	$html .= $smarty->fetch('paticka.tpl');
+	file_put_contents(WWW."/$htmlfile.html", $html);
+}
+
 $smarty->assign('title', 'Hlasy ptáků');
 $smarty->assign('ptaci', $birds);
 $html = $smarty->fetch('hlavicka.tpl');
 $html .= $smarty->fetch('index.tpl');
 $html .= $smarty->fetch('paticka.tpl');
 file_put_contents(WWW.'/index.html', $html);
+
+$smarty->assign('title', 'Hlasy ptáků');
+$smarty->assign('rubriky', $rubriky);
+$html = $smarty->fetch('hlavicka.tpl');
+$html .= $smarty->fetch('rubriky.tpl');
+$html .= $smarty->fetch('paticka.tpl');
+file_put_contents(WWW.'/rubriky.html', $html);
 
 $smarty->assign('title', 'Hlasy ptáků');
 $smarty->assign('VERSION', $VERSION);
