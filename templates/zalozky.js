@@ -26,7 +26,7 @@ for(var i=0; i<bookmarks.length; i++){
 
 }else{
 
-	if(filename != 'about.html' && filename != 'rubriky.html'){
+	if(filename != 'about.html'){
 
 		var nadpis = document.querySelector('h1');
 		var img = document.createElement("img");

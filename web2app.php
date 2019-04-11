@@ -11,7 +11,9 @@ if(!is_dir(WWW)){
 	mkdir(WWW, 0755, true);
 }
 
-$VERSION = `TERM=xterm-color gradle -q printVersionName 2>/dev/null`;
+$VERSION = `git describe --tags --always --dirty`;
+
+$lat = get_lat('templates/index.js');
 
 foreach($kategorie as $url=>$nazev){
 	$ptaci = get_members($url.'?mode=100');
@@ -21,6 +23,8 @@ foreach($kategorie as $url=>$nazev){
 		$birds[$htmlfile] = array(
 			'jmeno' => $jmeno,
 			'htmlfile' => $htmlfile,
+			'id' => asciize($jmeno),
+			'lat' => $lat[asciize($jmeno)]['l'],
 			'rubrika' => get_rubrika($clanek),
 			'rubrikaid' => asciize(get_rubrika($clanek)),
 			'info' => get_ptakinfo($clanek),
@@ -121,6 +125,15 @@ foreach($rubriky as $htmlfile => $rubrika){
 	file_put_contents(WWW."/$htmlfile.html", $html);
 }
 
+$smarty->assign('lat', $lat);
+
+$smarty->assign('title', 'Latinská jména');
+$smarty->assign('ptaci', $birds);
+$html = $smarty->fetch('hlavicka.tpl');
+$html .= $smarty->fetch('lat.tpl');
+$html .= $smarty->fetch('paticka.tpl');
+file_put_contents(WWW.'/lat.html', $html);
+
 $smarty->assign('title', 'Hlasy ptáků');
 $smarty->assign('ptaci', $birds);
 $html = $smarty->fetch('hlavicka.tpl');
@@ -128,7 +141,7 @@ $html .= $smarty->fetch('index.tpl');
 $html .= $smarty->fetch('paticka.tpl');
 file_put_contents(WWW.'/index.html', $html);
 
-$smarty->assign('title', 'Hlasy ptáků');
+$smarty->assign('title', 'Druhy');
 $smarty->assign('rubriky', $rubriky);
 $html = $smarty->fetch('hlavicka.tpl');
 $html .= $smarty->fetch('rubriky.tpl');

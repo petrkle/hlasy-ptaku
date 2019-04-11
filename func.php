@@ -200,3 +200,31 @@ function sort_by_jmeno($a, $b)
 	$coll = collator_create( 'cs_CZ.UTF-8' );
 	return collator_compare($coll, $a['jmeno'], $b['jmeno']);
 }
+
+function sort_by_lat_jmeno($a, $b)
+{
+	$coll = collator_create( 'cs_CZ.UTF-8' );
+	return collator_compare($coll, $a['l'], $b['l']);
+}
+
+function get_lat($file){
+
+	$lat = array();
+	$index = file($file, FILE_IGNORE_NEW_LINES | FILE_SKIP_EMPTY_LINES);
+	foreach($index as $line){
+		if(preg_match('/:{c:.*,l:/', $line)){
+			$line = preg_replace("/:{c:'/", ';', $line);
+			$line = preg_replace("/',l:'/", ';', $line);
+			$line = preg_replace("/'},/", '', $line);
+			$line = preg_split('/;/', $line);
+			$lat[preg_replace('/_/', '-', $line[0])] = array(
+				'c' => $line[1],
+				'l' => $line[2],
+			);
+		}
+	}
+
+	uasort($lat, 'sort_by_lat_jmeno');
+
+	return $lat;
+}
