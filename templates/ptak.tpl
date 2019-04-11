@@ -12,7 +12,7 @@
 {/if}
 
 {if $info.typ == 'img'}
-<div class="obrazek"><a href="{$info.img.id}.jpeg"><img src="{$info.img.id}.jpeg" style="width:100%;max-width:45rem;" class="obr"></a>{if $info.img.popis_ascii != $title_ascii}<p>{$info.img.popis}</p>{/if}</div>
+<div class="obrazek"><a href="{$info.img.id}.html"><img src="{$info.img.id}.jpeg" style="width:100%;max-width:45rem;" class="obr"></a>{if $info.img.popis_ascii != $title_ascii}<p>{$info.img.popis}</p>{/if}</div>
 
 {if $smarty.foreach.info.first}
 <p>

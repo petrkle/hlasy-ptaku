@@ -86,6 +86,9 @@ foreach($birds as $htmlfile => $bird){
 
 	foreach($bird['img'] as $img){
 		$bird['clanek'][$img['poradi']] = array('typ' => 'img', 'img' => $img);
+		$smarty->assign('img', $img['id'].'.jpeg');
+		$html = $smarty->fetch('img.tpl');
+		file_put_contents(WWW.'/'.$img['id'].'.html', $html);
 	}
 
 	foreach($bird['mp3'] as $mp3){
