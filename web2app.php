@@ -110,7 +110,7 @@ foreach($birds as $htmlfile => $bird){
 		$smarty->assign('next', $seznamptaku[$cislo+1]);
 	}
 	$html = $smarty->fetch('hlavicka.tpl');
-	$html .= preg_replace('/('.$bird['lat'].')/', '<a href="lat.html#'.$bird['id'].'">'.$bird['lat'].'</a>', $smarty->fetch('ptak.tpl'));
+	$html .= preg_replace('/\('.$bird['lat'].'\)/', '(<a href="lat.html#'.$bird['id'].'">'.$bird['lat'].'</a>)', $smarty->fetch('ptak.tpl'));
 	$html .= $smarty->fetch('paticka.tpl');
 	file_put_contents(WWW.'/'.$htmlfile, $html);
 	$cislo++;
