@@ -2,7 +2,7 @@ var ptaci = {
 bazant_obecny:{c:'Bažant obecný',l:'Phasianus colchicus'},
 bekasina_otavni:{c:'Bekasina otavní',l:'Gallinago gallinago'},
 belorit_sedy:{c:'Bělořit šedý',l:'Oenanthe oenanthe'},
-brambornicek_cernohlavy:{c:'Bramborníček černohlavý',l:'Saxicola rubicola'},
+brambornicek_cernohlavy:{c:'Bramborníček černohlavý',l:'Saxicola torquata'},
 brambornicek_hnedy:{c:'Bramborníček hnědý',l:'Saxicola rubetra'},
 brhlik_lesni:{c:'Brhlík lesní',l:'Sitta europaea'},
 brkoslav_severni:{c:'Brkoslav severní',l:'Bombycilla garrulus'},
