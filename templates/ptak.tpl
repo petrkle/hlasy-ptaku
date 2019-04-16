@@ -54,3 +54,8 @@ Latinský název: <a href="lat.html#{$ptak.id}">{$ptak.lat}</a>
 <li><a href="{$next.file}">{$next.bird.jmeno} &raquo;</a></li>
 {/if}
 </ul>
+
+<script src="swipe.js"></script>
+<script>
+swipeonelement('obrazek', '{$next.file}', '{$prev.file}');
+</script>
