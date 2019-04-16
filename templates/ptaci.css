@@ -1,6 +1,6 @@
 @media all{
 @font-face{font-family:"robotoregular";src:url("roboto-regular.ttf") format("opentype");}
-html,body{font-family:"robotoregular",sans-serif;color:#000;background:#fff;margin:0;padding:0;text-align:center;margin:0;padding:0;}
+html,body{font-family:"robotoregular",sans-serif;color:#000;background:#fff;margin:0;padding:0;text-align:center;}
 }
 
 @media screen{
