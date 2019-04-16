@@ -170,8 +170,8 @@ function get_ptakinfo($url){
 	if(!$zakladniudaje){
 		$all = $xpath->query("//div[@id='article']");
 		$text = $all[0]->nodeValue;
-		if(preg_match('/Základní údaje/', $text)){
-			$text = preg_replace('/.*Základní údaje/s', '', $text);
+		if(preg_match('/(Základní údaje|Zákaldní údaje)/', $text)){
+			$text = preg_replace('/.*(Základní údaje|Zákaldní údaje)/s', '', $text);
 			$text = trim(preg_replace('/Autor:.*/s', '', $text));
 			$text = trim(preg_replace('/Video:.*/s', '', $text));
 			$poradi = $poradi + count($navrat);
