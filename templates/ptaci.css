@@ -17,6 +17,7 @@ p.c{text-align:center;}
 .obrazek a{display:block;font-size:0;}
 .obrazek p{margin:0 0 1em 0;padding:0.5em;}
 .hlavicka{text-decoration:none;}
+a.lat{color:#393;font-weight:bold;display:inline;font-size:1em;}
 #q{margin:0;padding:0;border:0;width:100%;font-size:1.3em;line-height:2;height:4rem;}
 #q::-webkit-search-cancel-button{position:relative;right:0.5rem;height:3rem;width:3rem;}
 .vysledek{color:#fff;background:#393;border-bottom:solid 1px #eee;}
