@@ -4,6 +4,7 @@
 	<meta http-equiv="content-type" content="text/html; charset=utf-8" />
 	<title>{$title}</title>
 	<meta name="viewport" content="width=device-width,user-scalable=1" />
+	<link rel="icon" type="image/png" href="ptak512.png" />
 </head>
 <body>
 <a href="{$htmlfile}"><img src="{$img}"></a>
