@@ -7,7 +7,7 @@
 	<link rel="icon" type="image/png" href="ptak512.png" />
 </head>
 <body>
-<a href="{$htmlfile}"><img src="{$img}"></a>
+<a href="{$htmlfile}#{$img}"><img src="{$img}.jpeg"></a>
 </body>
 <style>
 {literal}

@@ -87,7 +87,7 @@ foreach($birds as $htmlfile => $bird){
 	foreach($bird['img'] as $img){
 		$bird['clanek'][$img['poradi']] = array('typ' => 'img', 'img' => $img);
 		$smarty->assign('htmlfile', $htmlfile);
-		$smarty->assign('img', $img['id'].'.jpeg');
+		$smarty->assign('img', $img['id']);
 		$html = $smarty->fetch('img.tpl');
 		file_put_contents(WWW.'/'.$img['id'].'.html', $html);
 	}
