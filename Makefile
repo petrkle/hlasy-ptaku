@@ -17,6 +17,6 @@ tag:
 	git tag -a -s -m "Verze $(NTAG)" $(NTAG)
 
 clean:
-	TERM=xterm-color gradle clean
+	gradle clean
 	rm -rf build .gradle
 	rm -rf tmp
