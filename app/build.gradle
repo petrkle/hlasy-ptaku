@@ -21,7 +21,6 @@ android {
 
 android {
     compileSdkVersion 28
-    buildToolsVersion "28.0.0"
     defaultConfig {
         applicationId "cz.kle.hlasyptaku"
         minSdkVersion 21
