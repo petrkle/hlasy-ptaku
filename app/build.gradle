@@ -56,16 +56,6 @@ task composer(type: Exec) {
 		workingDir '..'
 }
 
-task jpegoptim(type: Exec, dependsOn: ['generate']) {
-    commandLine 'bash', '-c', 'jpegoptim -q -s -m80 *.jpeg'
-		workingDir 'src/main/assets/www'
-}
-
-task mp3optim(type: Exec, dependsOn: ['jpegoptim']) {
-    commandLine 'bash', './mp3crunch.sh'
-		workingDir '..'
-}
-
 task generateIcons(type: Exec) {
     commandLine 'bash', './icons.sh'
 		workingDir '..'
@@ -82,7 +72,7 @@ task customClean(type: Delete) {
 }
 clean.dependsOn customClean
 
-preBuild.dependsOn(mp3optim)
+preBuild.dependsOn(generate)
 
 def props = new Properties()
 
