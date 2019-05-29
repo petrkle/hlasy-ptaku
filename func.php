@@ -157,6 +157,8 @@ function get_ptakinfo($url){
 	foreach($odstavce as $odstavec){
 		$nodeposition = count($xpath->query('preceding::*', $odstavec));
 		$text = trim(preg_replace(['(\s+)u', '(^\s|\s$)u'], [' ', ''], $odstavec->nodeValue));
+		$text = preg_replace('/\s+/', ' ', $text);
+		$text = preg_replace('/"pícháním".*65533; zobák/', '"pícháním". Zobák', $text);
 		if(strlen($text)>0 and !preg_match('/^Video:/', $text) and trim($text)!='.'){
 			array_push($navrat, array('poradi'=> $nodeposition, 'text' => $text));
 			if($text == 'Základní údaje'){
