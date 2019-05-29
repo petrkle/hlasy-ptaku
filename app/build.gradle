@@ -43,7 +43,7 @@ android {
 
 dependencies {
     implementation fileTree(dir: 'libs', include: ['*.jar'])
-		implementation 'com.android.support:appcompat-v7:27.1.1'
+    implementation 'androidx.appcompat:appcompat:1.0.2'
 }
 
 task generate(type: Exec, dependsOn: ['composer', 'generateIcons']) {
@@ -53,6 +53,16 @@ task generate(type: Exec, dependsOn: ['composer', 'generateIcons']) {
 
 task composer(type: Exec) {
     commandLine 'composer', 'install'
+		workingDir '..'
+}
+
+task jpegoptim(type: Exec, dependsOn: ['generate']) {
+    commandLine 'bash', '-c', 'jpegoptim -q -s -m80 *.jpeg'
+		workingDir 'src/main/assets/www'
+}
+
+task mp3optim(type: Exec, dependsOn: ['jpegoptim']) {
+    commandLine 'bash', './mp3crunch.sh'
 		workingDir '..'
 }
 
@@ -72,7 +82,7 @@ task customClean(type: Delete) {
 }
 clean.dependsOn customClean
 
-preBuild.dependsOn(generate)
+preBuild.dependsOn(mp3optim)
 
 def props = new Properties()
 
