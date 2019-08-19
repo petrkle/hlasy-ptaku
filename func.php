@@ -207,6 +207,9 @@ function get_nahravkyinfo($url){
 		$text = trim(preg_replace(['(\s+)u', '(^\s|\s$)u'], [' ', ''], $odstavec->nodeValue));
 		array_push($navrat, $text);
 	}
+	if(preg_match('/krepelka/', $url)){
+		$navrat = array();
+	}
 	return($navrat);
 }
 
