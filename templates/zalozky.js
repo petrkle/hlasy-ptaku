@@ -9,6 +9,8 @@ if (localStorage.getItem('bookmarks') != null) {
 
 if(filename == 'index.html'){
 
+bookmarks.sort((a, b) => (a.nadpis > b.nadpis) ? -1 : 1)
+
 for(var i=0; i<bookmarks.length; i++){
 
 	ul = document.getElementsByTagName("ul");
