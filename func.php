@@ -202,11 +202,22 @@ function get_nahravkyinfo($url){
 	$dom = new DOMDocument();
 	$dom->loadHTML(file_get_contents(TMP.'/'.url2fn($url)));
 	$xpath = new DOMXPath($dom);
+
 	$odstavce = $xpath->query("(//div[@id='article']/div[contains(@style,'color: grey')]/span)[position()<last()]");
 	foreach($odstavce as $odstavec){
 		$text = trim(preg_replace(['(\s+)u', '(^\s|\s$)u'], [' ', ''], $odstavec->nodeValue));
 		array_push($navrat, $text);
 	}
+
+	$posledni = $xpath->query("(//div[@id='article']/div[contains(@style,'color: grey')]/span)[position()=last()]");
+	foreach($posledni as $odstavec){
+		$text = trim(preg_replace(['(\s+)u', '(^\s|\s$)u'], [' ', ''], $odstavec->nodeValue));
+		$text = trim(preg_replace('/Pavel.*/', '', $text));
+		if(strlen($text)>0){
+			array_push($navrat, $text);
+		}
+	}
+
 	if(preg_match('/krepelka/', $url)){
 		$navrat = array();
 	}
