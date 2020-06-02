@@ -208,6 +208,7 @@ function get_nahravkyinfo($url){
 	$odstavce = $xpath->query("(//div[@id='article']/div[contains(@style,'color: grey')]/span)[position()<last()]");
 	foreach($odstavce as $odstavec){
 		$text = trim(preg_replace(['(\s+)u', '(^\s|\s$)u'], [' ', ''], $odstavec->nodeValue));
+		$text = preg_replace('/\?zpívat"/', 'zpívat', $text);
 		array_push($navrat, $text);
 	}
 
