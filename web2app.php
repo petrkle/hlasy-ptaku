@@ -168,4 +168,10 @@ copy('img/ptak512.png', WWW.'/ptak512.png');
 copyToDir('templates/*.js', WWW);
 copyToDir('templates/*.svg', WWW);
 copyToDir(TMP.'/*.jpeg', WWW);
-copyToDir(TMP.'/*.mp3', WWW);
+
+foreach($birds as $htmlfile => $bird){
+	foreach($bird['mp3'] as $mp3){
+		$foo = $mp3['id'].'.mp3';
+		copy(TMP."/$foo", WWW."/$foo");
+	}
+}

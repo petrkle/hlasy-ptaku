@@ -102,13 +102,15 @@ function get_mp3($url){
 
 		if($l->item(0)){
 			$link = $l->item(0)->getAttribute("href");
-			$mp3 = preg_replace('/.*audio\/([0-9]+).*/', 'https://media.rozhlas.cz/_audio/\1.mp3', $link);
-			array_push($linky, array(
-			'poradi' => $nodeposition,
-			'url' => $mp3,
-			'id' => basename($mp3, '.mp3'),
-			'popis' => $popis,
-			));
+			if(!preg_match('/audio\/715392\/embed/', $link)){
+				$mp3 = preg_replace('/.*audio\/([0-9]+).*/', 'https://media.rozhlas.cz/_audio/\1.mp3', $link);
+				array_push($linky, array(
+				'poradi' => $nodeposition,
+				'url' => $mp3,
+				'id' => basename($mp3, '.mp3'),
+				'popis' => $popis,
+				));
+			}
 		}
 
 	}
