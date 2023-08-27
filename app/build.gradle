@@ -2,10 +2,10 @@ apply plugin: 'com.android.application'
 apply plugin: 'org.ajoberstar.grgit'
 
 ext {
-	gitVersionName = grgit.describe()
-	dirty = !grgit.status().clean
-	if(dirty) gitVersionName = gitVersionName + '-dirty'
-	gitVersionCode = grgit.log().size()
+  gitVersionName = grgit.describe()
+  dirty = !grgit.status().clean
+  if(dirty) gitVersionName = gitVersionName + '-dirty'
+  gitVersionCode = grgit.log().size()
 }
 
 
@@ -21,22 +21,22 @@ android {
 
 android {
     compileSdkVersion 33
-		namespace "cz.kle.hlasyptaku"
+    namespace "cz.kle.hlasyptaku"
     defaultConfig {
         applicationId "cz.kle.hlasyptaku"
         minSdkVersion 21
         targetSdkVersion 33
         versionCode gitVersionCode
         versionName "${gitVersionName}"
-				setProperty("archivesBaseName", "Hlasy-ptaku-$versionName")
+        setProperty("archivesBaseName", "Hlasy-ptaku-$versionName")
     }
-		signingConfigs {
+    signingConfigs {
         release
     }
     buildTypes {
         release {
             minifyEnabled false
-						signingConfig signingConfigs.release
+            signingConfig signingConfigs.release
             proguardFiles getDefaultProguardFile('proguard-android.txt'), 'proguard-rules.txt'
         }
     }
@@ -44,42 +44,42 @@ android {
 
 dependencies {
     implementation fileTree(dir: 'libs', include: ['*.jar'])
-    implementation 'androidx.appcompat:appcompat:1.5.1'
+    implementation 'androidx.appcompat:appcompat:1.6.1'
 }
 
 task generate(type: Exec, dependsOn: ['composer', 'generateIcons']) {
     commandLine 'php', 'web2app.php'
-		workingDir '..'
+    workingDir '..'
 }
 
 task composer(type: Exec) {
     commandLine 'composer', 'install'
-		workingDir '..'
+    workingDir '..'
 }
 
 task jpegoptim(type: Exec, dependsOn: ['generate']) {
     commandLine 'bash', '-c', 'jpegoptim -q -s -m80 *.jpeg'
-		workingDir 'src/main/assets/www'
+    workingDir 'src/main/assets/www'
 }
 
 task mp3optim(type: Exec, dependsOn: ['jpegoptim']) {
     commandLine 'bash', './mp3crunch.sh'
-		workingDir '..'
+    workingDir '..'
 }
 
 task generateIcons(type: Exec) {
     commandLine 'bash', './icons.sh'
-		workingDir '..'
+    workingDir '..'
 }
 
 task customClean(type: Delete) {
     delete "${projectDir}/../templates_c"
     delete "${projectDir}/../vendor"
-		delete "src/main/res/mipmap-hdpi"
-		delete "src/main/res/mipmap-mdpi"
-		delete "src/main/res/mipmap-xhdpi"
-		delete "src/main/res/mipmap-xxhdpi"
-		delete "src/main/res/mipmap-xxxhdpi"
+    delete "src/main/res/mipmap-hdpi"
+    delete "src/main/res/mipmap-mdpi"
+    delete "src/main/res/mipmap-xhdpi"
+    delete "src/main/res/mipmap-xxhdpi"
+    delete "src/main/res/mipmap-xxxhdpi"
 }
 clean.dependsOn customClean
 

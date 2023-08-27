@@ -1,18 +1,18 @@
 buildscript {
     repositories {
         jcenter()
-				google()
+        google()
     }
     dependencies {
-        classpath 'com.android.tools.build:gradle:7.3.0'
-				classpath 'org.ajoberstar.grgit:grgit-gradle:5.0.0'
+        classpath 'com.android.tools.build:gradle:8.1.0'
+        classpath 'org.ajoberstar.grgit:grgit-gradle:5.2.0'
     }
 }
 
 allprojects {
     repositories {
         jcenter()
-				google()
+        google()
     }
     tasks.withType(JavaCompile) {
         options.compilerArgs << "-Xlint:deprecation"
@@ -23,5 +23,5 @@ task clean(type: Delete) {
     delete 'build'
     delete 'gradle'
     delete 'locale'
-		delete 'app/src/main/assets'
+    delete 'app/src/main/assets'
 }
