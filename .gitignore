@@ -6,3 +6,5 @@ app/src/main/res/mipmap-*
 .gradle
 build
 local.properties
+fastlane/README.md
+fastlane/report.xml

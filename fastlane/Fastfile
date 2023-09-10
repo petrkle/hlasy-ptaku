@@ -1,0 +1,14 @@
+default_platform(:android)
+
+platform :android do
+  desc "Deploy a new version to the Google Play"
+  lane :deploy do
+    upload_to_play_store(
+     aab: './app/build/outputs/bundle/release/Hlasy-ptaku-release.aab',
+     skip_upload_metadata: true,
+     skip_upload_images: true,
+     skip_upload_screenshots: true,
+     rollout: '1'
+     )
+  end
+end

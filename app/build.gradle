@@ -28,7 +28,7 @@ android {
         targetSdkVersion 33
         versionCode gitVersionCode
         versionName "${gitVersionName}"
-        setProperty("archivesBaseName", "Hlasy-ptaku-$versionName")
+        setProperty("archivesBaseName", "Hlasy-ptaku")
     }
     signingConfigs {
         release

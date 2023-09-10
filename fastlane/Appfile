@@ -1,0 +1,2 @@
+json_key_file("/home/petr/android-sec/fastlane.json")
+package_name("cz.kle.hlasyptaku")
