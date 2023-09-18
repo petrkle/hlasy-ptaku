@@ -1,7 +1,7 @@
 {
     "require": {
         "php": ">=8.2.0",
-        "smarty/smarty": "4.3.2"
+        "smarty/smarty": "4.3.4"
     },
     "config": {
       "optimize-autoloader": true,
