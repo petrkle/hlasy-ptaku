@@ -4,6 +4,7 @@ templates_c
 app/src/main/assets/www
 app/src/main/res/mipmap-*
 .gradle
+*.cache
 build
 local.properties
 fastlane/README.md
