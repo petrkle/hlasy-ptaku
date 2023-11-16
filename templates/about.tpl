@@ -35,6 +35,10 @@ Příspěvek na další vývoj, opravy chyb a přidávání nových funkcí mů�
 
 <p class="c">Kontakt: <a href="mailto:petr@kle.cz?subject=Hlasy%20ptáků">petr@kle.cz</a></p>
 
-<p><a href="https://github.com/petrkle/hlasy-ptaku/blob/master/README.md">Ochrana soukromí</a></p>
+<h3><a href="https://kle.cz/hlasy-ptaku/zasady-ochrany-soukromi.html">Zásady ochrany soukromí</a></h3>
+
+<p>Nejsou vyžadována žádná oprávnění.</p>
+<p>Žádné datové přenosy.</p>
+<p>Aplikace neshromažďuje ani nesdílí data o uživatelích.</p>
 
 {include file='settings.tpl'}
