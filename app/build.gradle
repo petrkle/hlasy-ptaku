@@ -20,12 +20,12 @@ android {
 }
 
 android {
-    compileSdkVersion 34
+    compileSdkVersion 35
     namespace "cz.kle.hlasyptaku"
     defaultConfig {
         applicationId "cz.kle.hlasyptaku"
-        minSdkVersion 21
-        targetSdkVersion 34
+        minSdkVersion 24
+        targetSdkVersion 35
         versionCode gitVersionCode
         versionName "${gitVersionName}"
         setProperty("archivesBaseName", "Hlasy-ptaku")
@@ -43,7 +43,7 @@ android {
 }
 
 dependencies {
-    implementation fileTree(dir: 'libs', include: ['*.jar'])
+    implementation 'org.apache.cordova:framework:13.0.0'
     implementation 'androidx.appcompat:appcompat:1.6.1'
 }
 

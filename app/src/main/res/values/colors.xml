@@ -1,5 +1,5 @@
 <?xml version="1.0" encoding="utf-8"?>
 <resources>
-	<color name="ptaci_header">#1B5E20</color>
-	<color name="ptaci_bg">#fff</color>
+  <color name="ptaci_header">#1B5E20</color>
+  <color name="ptaci_bg">#fff</color>
 </resources>
