@@ -22,6 +22,7 @@ clean:
 	gradle clean
 	rm -rf build .gradle
 	rm -rf tmp
+	cp -r ../web-archives/hlasy-ptaku tmp
 
 fastlane:
 	bundle update
