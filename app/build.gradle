@@ -44,7 +44,6 @@ android {
 
 dependencies {
     implementation 'org.apache.cordova:framework:13.0.0'
-    implementation 'androidx.appcompat:appcompat:1.6.1'
 }
 
 task generate(type: Exec, dependsOn: ['composer', 'generateIcons']) {
