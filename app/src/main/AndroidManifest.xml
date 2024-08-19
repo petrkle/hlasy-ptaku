@@ -28,7 +28,7 @@
   android:launchMode="singleTop"
   android:name="HlasyPtaku"
   android:windowSoftInputMode="adjustResize"
-  android:theme="@style/HlasyPtaku"
+  android:theme="@style/Theme.App.SplashScreen"
   android:exported="true"
 >
 

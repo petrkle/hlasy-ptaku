@@ -1,7 +1,11 @@
 <?xml version="1.0" encoding="utf-8"?>
 <resources>
-<style name="HlasyPtaku" parent="Theme.AppCompat.Light.NoActionBar">
+<style name="Theme.App.SplashScreen" parent="Theme.SplashScreen.IconBackground">
     <item name="android:windowBackground">@color/ptaci_bg</item>
     <item name="android:colorBackground">@color/ptaci_header</item>
+    <item name="windowSplashScreenBackground">@color/ptaci_bg</item>
+    <item name="windowSplashScreenAnimatedIcon">@drawable/ptak</item>
+    <item name="windowSplashScreenAnimationDuration">20</item>
+    <item name="postSplashScreenTheme">@style/Theme.AppCompat.NoActionBar</item>
 </style>
 </resources>
