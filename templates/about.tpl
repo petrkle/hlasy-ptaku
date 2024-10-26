@@ -14,7 +14,7 @@ Textové, zvukové a obrazové materiály Českého rozhlasu jsou chráněny aut
 </p>
 
 <p style="text-align:center;">
-<a href="index.html"><img src="ptak512.png" style="width:100%;max-width:512px;"></a>
+<a href="index.html"><img src="kos.svg" style="width:100%;max-width:512px;"></a>
 </p>
 
 <h3>Podpoř Hlasy ptáků!</h3>

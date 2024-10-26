@@ -163,7 +163,7 @@ file_put_contents(WWW.'/about.html', $html);
 copy('templates/ptaci.css', WWW.'/ptaci.css');
 copy('templates/ptacidark.css', WWW.'/ptacidark.css');
 copy('templates/roboto-regular.ttf', WWW.'/roboto-regular.ttf');
-copy('img/ptak512.png', WWW.'/ptak512.png');
+copy('kos.svg', WWW.'/kos.svg');
 
 copyToDir('templates/*.js', WWW);
 copyToDir('templates/*.svg', WWW);
