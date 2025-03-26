@@ -53,7 +53,7 @@ task generate(type: Exec, dependsOn: ['composer', 'generateIcons']) {
 }
 
 task composer(type: Exec) {
-    commandLine 'composer', 'install'
+    commandLine 'composer', 'install', '--quiet'
     workingDir '..'
 }
 
