@@ -43,8 +43,8 @@ android {
 }
 
 dependencies {
-    implementation 'org.apache.cordova:framework:14.0.0'
-    implementation(platform('org.jetbrains.kotlin:kotlin-bom:2.0.20'))
+    implementation 'org.apache.cordova:framework:14.0.1'
+    implementation(platform('org.jetbrains.kotlin:kotlin-bom:2.1.20'))
 }
 
 task generate(type: Exec, dependsOn: ['composer', 'generateIcons']) {
