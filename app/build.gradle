@@ -20,12 +20,12 @@ android {
 }
 
 android {
-    compileSdkVersion 35
+    compileSdkVersion 36
     namespace = "cz.kle.hlasyptaku"
     defaultConfig {
         applicationId "cz.kle.hlasyptaku"
         minSdkVersion 24
-        targetSdkVersion 35
+        targetSdkVersion 36
         versionCode gitVersionCode
         versionName "${gitVersionName}"
     }
