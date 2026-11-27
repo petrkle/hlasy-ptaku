@@ -4,20 +4,20 @@
         "Read more about it at https://getcomposer.org/doc/01-basic-usage.md#installing-dependencies",
         "This file is @generated automatically"
     ],
-    "content-hash": "84705e4f7d8302b98eef040e183ca6f5",
+    "content-hash": "ed994f1fa9a3bed59672279c7e9f3785",
     "packages": [
         {
             "name": "smarty/smarty",
-            "version": "v5.9.0",
+            "version": "v5.9.1",
             "source": {
                 "type": "git",
                 "url": "https://github.com/smarty-php/smarty.git",
-                "reference": "d37716def381e7b0450ed1608f24045c18f67eba"
+                "reference": "0bf498be1fa80e71de6c0ad4cfb4b724e59ad21e"
             },
             "dist": {
                 "type": "zip",
-                "url": "https://api.github.com/repos/smarty-php/smarty/zipball/d37716def381e7b0450ed1608f24045c18f67eba",
-                "reference": "d37716def381e7b0450ed1608f24045c18f67eba",
+                "url": "https://api.github.com/repos/smarty-php/smarty/zipball/0bf498be1fa80e71de6c0ad4cfb4b724e59ad21e",
+                "reference": "0bf498be1fa80e71de6c0ad4cfb4b724e59ad21e",
                 "shasum": ""
             },
             "require": {
@@ -72,7 +72,7 @@
             "support": {
                 "forum": "https://github.com/smarty-php/smarty/discussions",
                 "issues": "https://github.com/smarty-php/smarty/issues",
-                "source": "https://github.com/smarty-php/smarty/tree/v5.9.0"
+                "source": "https://github.com/smarty-php/smarty/tree/v5.9.1"
             },
             "funding": [
                 {
@@ -80,8 +80,8 @@
                     "type": "github"
                 }
             ],
-            "time": "2026-11-16T10:13:43+00:00",
-            "published-time": "2026-11-16T10:13:56+00:00"
+            "time": "2026-11-27T09:56:25+00:00",
+            "published-time": "2026-11-27T10:36:55+00:00"
         },
         {
             "name": "symfony/polyfill-mbstring",
